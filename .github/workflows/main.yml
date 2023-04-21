@@ -35,10 +35,5 @@ jobs:
         id: tfplan
         run: terraform plan -var app_name=ordering_app -var rds_instance_name=ordering-app-rds -out=tfplan
 
-      - name: Approve Terraform plan
-        uses: peter-evans/terraform-plan-approve@v2
-        with:
-          plan-file: tfplan
-
       - name: Terraform apply
         run: terraform apply -auto-approve tfplan
