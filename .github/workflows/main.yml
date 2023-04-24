@@ -26,14 +26,17 @@ jobs:
           aws-region: ap-south-1
 
       - name: Terraform init
+        working-directory: ./terraform
         run: terraform init
 
       - name: Terraform validate
         run: terraform validate
 
       - name: Terraform plan
+        working-directory: ./terraform
         id: tfplan
         run: terraform plan -var app_name=ordering_app -var rds_instance_name=ordering-app-rds -out=tfplan
 
       - name: Terraform apply
+        working-directory: ./terraform
         run: terraform apply -auto-approve tfplan
