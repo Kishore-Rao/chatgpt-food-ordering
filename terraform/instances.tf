@@ -1,5 +1,5 @@
 resource "aws_instance" "app_instance" {
-  ami           = var.ami_id
+  ami           = ami-07d3a50bd29811cd1
   instance_type = var.instance_type
   subnet_id     = aws_subnet.private_subnet_1.id
   vpc_security_group_ids = [aws_security_group.app_sg.id]
