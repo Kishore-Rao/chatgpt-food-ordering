@@ -6,7 +6,7 @@ variable "app_name" {
 variable "ami_id" {
   type        = string
   description = "ID of the AMI to use for the EC2 instance"
-  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI (HVM), SSD Volume Type
+  default     = "ami-07d3a50bd29811cd1" # Amazon Linux 2 AMI (HVM), SSD Volume Type
 }
 
 variable "instance_type" {

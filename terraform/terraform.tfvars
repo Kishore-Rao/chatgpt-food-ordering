@@ -1,2 +1,2 @@
-app_name = "my-app"
-rds_instance_name = "my-app-rds"
+app_name = "ordering_app"
+rds_instance_name = "orderingapprds"
